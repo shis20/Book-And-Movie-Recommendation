@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 200rpx;
+}
+.movie-img{
+    width: 200rpx;
+    height: 270rpx;
+    margin-bottom: 22rpx;
+}
+
+.movie-name{
+    font-size: 26rpx;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.rate-container{
+    margin-top: 5rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.rate-num{
+    margin-left: 20rpx;
+    font-size: 25rpx;
+}

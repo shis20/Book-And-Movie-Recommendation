@@ -1,0 +1,13 @@
+<view class="container f-class">
+    <view class="front-container">
+        <text class="text1">{{title}}</text>
+        <text class="text2">更多 ></text>
+    </view>
+    <view class="movie-container">
+        <block wx:for="{{movies}}" wx:key="index">
+            <movie movie="{{item}}" />
+        </block>
+        
+    </view>
+   
+</view>

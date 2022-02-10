@@ -1,0 +1,24 @@
+
+.container{
+    padding: 36rpx 36rpx;
+    
+}
+.text1{
+    font-size: 30rpx;
+}
+.text2{
+    font-size: 30rpx;
+    color:#1b49a5;
+}
+.front-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30rpx;
+}
+
+.movie-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
