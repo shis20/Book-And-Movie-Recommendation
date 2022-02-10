@@ -1,0 +1,28 @@
+.movie-list{
+    margin-bottom: 30rpx;
+    background-color:#D8E9B2;
+   
+}
+.ex-search-bar{
+    height: 80rpx !important;
+    color: teal;
+    background-color:#D8E9B2 !important ;
+    margin-bottom: 30rpx;
+}
+.movie{
+    margin-bottom: 30rpx;
+}
+.search-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    justify-content: space-between;
+
+}
+.search-container::after{
+    content: '';
+    width: 200rpx;
+}

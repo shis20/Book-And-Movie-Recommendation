@@ -1,0 +1,11 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container">
+    <view class="hello">Hello! </view>
+  
+    <l-avatar class="l-avatar" placement="bottom" open-data="{{['userAvatarUrl','userNickName']}}"/>
+   
+    
+    <view bind:tap="onTap" class="button">
+        <text class="button-text">点击开启小程序</text>
+    </view>
+</view>

@@ -1,0 +1,54 @@
+/* pages/welcome/welcome.wxss */
+
+page{
+    width:100%;
+    height:100%;
+  }
+  .hello{
+    text-align: center;
+    padding-top: 400rpx;
+    padding-bottom: 250rpx;
+    font-size: 100rpx;
+    color: white;
+    font-weight: bold;
+    line-height:1.4;
+    opacity: 0.8;
+  }
+
+  
+  .button-text{
+  
+    text-align: center;
+    font-size:35rpx;
+    color: rgb(255, 255, 255);
+    line-height: 100rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .button{
+   
+    border-radius: 10rpx;
+    color: rgb(255, 255, 255);
+    height: 100rpx;
+    width: 300rpx;
+    border: 3px solid white;
+  }
+
+.container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(http://m.qpic.cn/psc?/V51XPilg2rcbPL34SQKr37NiUE2hjJTh/45NBuzDIW489QBoVep5mcSX*lIaEihGW3jP745QMZ.ofjZ5lTdCgPMNNLqB3KhvshcMesFROMNk9VibguK6S7RUz0r1FnB7BtI86.BEUDZU!/b&bo=fQI4BH0COAQBJwA!&rf=viewer_4&t=5);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+
+}
+
+.l-avatar userNickName{
+  font-size: 50rpx;
+}

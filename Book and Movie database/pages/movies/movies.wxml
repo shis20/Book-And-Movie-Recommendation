@@ -1,0 +1,16 @@
+<l-search-bar bind:lincancel="onSearchCancel" bind:linconfirm="onConfirm" placeholder="盗梦空间 肖申克的救赎"  l-class="ex-search-bar" />
+<!--自定义组件 template
+从服务器加载数据-->
+<view wx:if="{{!searchResult}}">
+    <movie-list data-type="top250" bind:tap="onGotoMore" movies="{{top250}}" title="豆瓣Top250" f-class="movie-list" />
+    <movie-list data-type="in_theaters" bind:tap="onGotoMore" movies="{{inTheaters}}" title="正在热映"
+        f-class="movie-list" />
+    <movie-list data-type="coming_soon" bind:tap="onGotoMore" movies="{{comingSoon}}" title="即将上映"
+        f-class="movie-list" />
+   
+</view>
+<view wx:else class="search-container" >
+    <block wx:for="{{searchData}}" wx:key="index">
+    <movie class="movie" movie="{{item}}" />
+    </block>
+</view>

@@ -1,0 +1,93 @@
+<view class="full-page">
+    <view class="bottom-part">
+        <view class="left-side">
+            <view class="book-text1">
+                <text>读</text>
+            </view>
+            <view class="book-text2">
+                <text>书</text>
+            </view>
+            <view class="book-text3">
+                <text>荟</text>
+            </view>
+        </view>
+
+        <view class="right-side">
+            <swiper circular interval="3000" indicator-dots="{{true}}" autoplay="{{true}}">
+                <swiper-item>
+                    <image src="https://img9.doubanio.com/view/ark_article_cover/retina/public/132463460.jpg?v=1583131903"></image>
+                </swiper-item>
+                <swiper-item>
+                    <image src="https://img9.doubanio.com/view/subject/s/public/s33998460.jpg"></image>
+                </swiper-item>
+                <swiper-item>
+                    <image src="https://img9.doubanio.com/view/subject/s/public/s33956462.jpg"></image>
+                </swiper-item>
+                <swiper-item>
+                    <image src="https://img9.doubanio.com/view/subject/s/public/s33939658.jpg"></image>
+                </swiper-item>
+                <swiper-item>
+                    <image src="https://img9.doubanio.com/view/subject/s/public/s33821754.jpg"></image>
+                </swiper-item>
+                <swiper-item>
+                    <image src="https://img9.doubanio.com/view/subject/s/public/s33946803.jpg"></image>
+                </swiper-item>
+                <swiper-item>
+                    <image src="https://img9.doubanio.com/view/ark_article_cover/retina/public/29864390.jpg?v=0"></image>
+                </swiper-item>
+
+                <swiper-item>
+                    <image src="https://img9.doubanio.com/view/ark_article_cover/retina/public/128919725.jpg?v=1577936785"></image>
+                </swiper-item>
+                <swiper-item>
+                    <image src="https://img9.doubanio.com/view/ark_article_cover/retina/public/54229854.jpg?v=0"></image>
+                </swiper-item>
+                <swiper-item>
+                    <image src="https://img9.doubanio.com/view/subject/s/public/s33747393.jpg"></image>
+                </swiper-item>
+            </swiper>
+        </view>
+    </view>
+
+    <!---77777777777777777777777777777777777777777777777-->
+   
+    <block wx:for="{{local_database}}" wx:key="postid" wx:for-item="item" >
+        <view data-id="{{item.postid}}" bind:tap="onGoToDetail" class="post-container">
+            <view class="author-date">
+                <!--头像和日期-->
+                <image class="headpic" src="{{item.userPic}}"></image>
+                <text class="user-id">{{item.userName}}</text>
+                <text class="date"> {{item.date}}</text>
+            </view>
+            <text class="header">{{item.bookName}}</text>
+            <text class="topic">{{item.bookTopic}}</text>
+            <view class="book-combination">
+                <image class="book-image" src="{{item.bookPic}}"></image>
+                <view class="book-content">
+                    <text class="autor-info">{{item.bookDesc.author}}</text>
+                    <text>{{item.bookDesc.publish1}}</text>
+                    <text>{{item.bookDesc.publish2}}</text>
+                    <text>{{item.bookDesc.publishYear}}</text>
+                    <text>{{item.bookDesc.pageNum}}</text>
+                    <text>{{item.bookDesc.type}}</text>
+                    <text>{{item.bookDesc.ISBN}}</text>
+
+                </view>
+
+            </view>
+
+
+            <!--影评-->
+            <text class="review-book">{{item.review}}</text>
+            <view class="like-view">
+                <l-icon name="favor" color="gray" size="30" />
+                <text class="star-font">{{item.starNum}}</text>
+                <l-icon name="eye" color="gray" size="30" />
+                <text class="view-font">{{item.viewNum}}</text>
+
+            </view>
+
+        </view>
+    </block>
+
+</view>

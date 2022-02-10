@@ -1,0 +1,77 @@
+<!--pages/postdetail/postdetail.wxml-->
+<view class="full-page">
+
+    <view class="copy-title-container">
+        <text class="copy-title">摘录</text>
+        
+    </view>
+    
+    <!--摘录-->
+    <view class="tool">
+        <view class="icon">
+            
+            <image wx:if="{{collected}}" bind:tap="saveAsFavo" class="save"
+                src="http://m.qpic.cn/psc?/V51XPilg2rcbPL34SQKr37NiUE2hjJTh/ruAMsa53pVQWN7FLK88i5uJw6ceiJt2cSZl5QfRHBcRm00jKQRCATPva9a6WrgluKmPqEmrYNhXMGfxezRZECEQN3EF4JiQfbVsR5D8Y4TQ!/mnull&bo=MAAwAAAAAAADByI!&rf=photolist&t=5">
+            </image>
+            <image wx:else bind:tap="saveAsFavo" class="saved" src="http://m.qpic.cn/psc?/V51XPilg2rcbPL34SQKr37NiUE2hjJTh/45NBuzDIW489QBoVep5mcSWkfOwyOsqRKGD7pXBDzZzHFiJwWDXXrr7YcVq3A0979gdM.OyX7soaROd3LpfyjBFo8o122zBSOt09oYnWIro!/b&bo=MAAwAAAAAAADFzI!&rf=viewer_4&t=5" ></image>
+            <image bind:tap="onShare" class="share"
+                src="http://m.qpic.cn/psc?/V51XPilg2rcbPL34SQKr37NiUE2hjJTh/ruAMsa53pVQWN7FLK88i5uj5gYENIxBg2CXfZo4Se7nDBb00A.RB1ZRkJ6IqHbIJaHggsB54gcPkjoKEJeeWvw1BnFkDrtB9FWpiis00ArA!/mnull&bo=MAAwAAAAAAADByI!&rf=photolist&t=5">
+            </image>
+
+            <image wx:if="{{!isPlaying}}" bind:tap="onMusic"  class="music-image" src="http://photogz.photo.store.qq.com/psc?/V51XPilg2rcbPL34SQKr37NiUE2hjJTh/ruAMsa53pVQWN7FLK88i5jgVbPQvdntwx5tBjYAJMKnB5tWDriQNViKGUCjZr6cOhpOSgWwHJxtWdEKkN9u5zfQ6QEsi4Fa.s69YqAuf.Jg!/mnull&bo=MwA3AAAAAAADByY!&rf=photolist&t=5"></image>
+            <image wx:else bind:tap="stopMusic"  class="music-image" src="http://a1.qpic.cn/psc?/V51XPilg2rcbPL34SQKr37NiUE2hjJTh/ruAMsa53pVQWN7FLK88i5jgVbPQvdntwx5tBjYAJMKl6TI2GIkINU414wMsMoq4xAY.vfj9yvgMeGW6rilh9.bCf6omceVrXwkNIWqFnD0I!/m&ek=1&kp=1&pt=0&bo=OAA4AAAAAAADFzI!&tl=1&vuin=1349268037&tm=1634083200&sce=60-3-3&rf=0-0"></image>
+        </view>
+
+        <view class="long-line"></view>
+
+    </view>
+    <view class="copy">
+        <text class="copy-content" space="ensp">{{ postData.detailCopy}}</text>
+        <text class="reference">{{postData.reference}}</text>
+    </view>
+    <!--也可能会喜欢的书-->
+
+    <view class="more-header-container">
+        <text class="more-like-header">你可能还会喜欢：</text>
+    </view>
+
+    <view class="more-like">
+
+        <view class="more-book1">
+            <image class="image-more1"
+                src="{{postData.moreBookImage1}}"></image>
+            <text class="name-more1">{{postData. moreBookName1}}</text>
+        </view>
+
+        <view class="more-book2">
+            <image class="image-more2"
+                src="{{postData.moreBookImage2}}"></image>
+            <text class="name-more2">{{postData. moreBookName2}}</text>
+        </view>
+
+        <view class="more-book3">
+            <image class="image-more3" src="{{postData.moreBookImage3}}"></image>
+            <text class="name-more3">{{postData. moreBookName3}}</text>
+        </view>
+    </view>
+    <view class="more-title-container">
+        <text class="more-review-title">更多书评：</text>
+    </view>
+    <!--更多书评-->
+    <view class="longer-review">
+        <!--用户信息-->
+        <view class="user">
+            <image class="user-head" src="{{postData. userheadNew}}"></image>
+            <text class="user-name">{{postData. userNameNew}}</text>
+            <text class="post-date">{{postData.userDateNew}}</text>
+        </view>
+
+        <view class="review-topic"></view>
+
+        <text class="article-contet" space="ensp">{{postData.userLongReview}}
+        </text>
+    
+
+    </view>
+  
+</view>
