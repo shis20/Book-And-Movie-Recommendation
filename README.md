@@ -10,3 +10,9 @@ efficiency.
 
  - Use JSON technology to represent the configuration information of the application. Contains basic information about the
 application, page configuration and routing, application-wide information, etc.
+
+Here is the App demo video
+
+
+
+[Movie_Book_demo.webm](https://github.com/shis20/Book-And-Movie-Recommendation/assets/99380263/454c2646-798b-4c85-91d4-f61c21c6fe44)
